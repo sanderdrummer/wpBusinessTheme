@@ -9,11 +9,12 @@ use Roots\Sage\Template\Wrapper;
  */
 add_filter('sage/display_sidebar', function ($display) {
     // The sidebar will NOT be displayed if ANY of the following return true
-    return $display ? !in_array(true, [
-        is_404(),
-        is_front_page(),
-        is_page_template('templates/template-custom.php'),
-    ]) : $display;
+    return false;
+    // return $display ? !in_array(true, [
+    //     is_404(),
+    //     is_front_page(),
+    //     is_page_template('templates/template-custom.php'),
+    // ]) : $display;
 });
 
 /**
