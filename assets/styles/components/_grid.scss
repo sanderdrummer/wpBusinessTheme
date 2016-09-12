@@ -1,5 +1,6 @@
 // Grid system
 .main {
+  margin-top: 60px;
   @include make-col-ready();
   @include media-breakpoint-up(sm) {
     @include make-col($main-sm-columns);
