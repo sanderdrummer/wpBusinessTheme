@@ -50,10 +50,12 @@ $sage_includes = [
     'src/setup.php',
     'src/filters.php',
     'src/admin.php',
-    'src/bootStrapNavWalker.php'
+    'src/bootStrapNavWalker.php',
+    'src/shortcodes.php'
 ];
 array_walk($sage_includes, function ($file) {
     if (!locate_template($file, true, true)) {
         trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
     }
 });
+
